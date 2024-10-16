@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Login = () => {
     return (
@@ -30,7 +31,7 @@ const Login = () => {
                         </svg>
                         <input type="password" className="grow" placeholder="Enter Password" />
                     </label>
-                    <a className="link link-warning">Don't Have An Account?</a>
+                    <Link to="/signup" className="link link-warning">Don't Have An Account?</Link>
                     <div className='mt-4'>
                         <button className="btn btn-block btn-warning">Login</button>
                     </div>

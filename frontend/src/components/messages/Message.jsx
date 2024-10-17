@@ -9,7 +9,6 @@ function Message({ message }) {
     const { user } = authUser;
 
     const fromMe = message.senderId === user._id;
-    // console.log(fromMe);
     
     const chatClassName = fromMe ? "chat-end" : "chat-start";
     const profilePic = fromMe ? user?.profilePic : selectedConversation?.profilePic;

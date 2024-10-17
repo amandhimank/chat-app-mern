@@ -28,7 +28,6 @@ export const signup = async (req, res) => {
 
         if (newUser) {
             const response = await newUser.save();
-            console.log(response);
 
             // generate jwt token and set cookie
             const payload = {

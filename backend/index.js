@@ -1,9 +1,9 @@
 import express from 'express';
-const app = express();
 import dotenv from 'dotenv';
 dotenv.config();
 
 import db from './db/connection.js';
+import { app, server } from './socket/socket.js';
 
 import bodyParser from 'body-parser';
 import cookieParser from 'cookie-parser';
@@ -18,9 +18,9 @@ app.use(cors({
     credentials: true
 }));
 
-app.get('/', (req, res) => {
-    res.send("Hello World");
-});
+// app.get('/', (req, res) => {
+//     res.send("Hello World");
+// });
 
 import authRoutes from './routes/auth.routes.js'; 
 import messageRoutes from './routes/message.route.js';
@@ -30,6 +30,6 @@ app.use("/auth", authRoutes);
 app.use("/message", messageRoutes);
 app.use("/user", userRoutes);
 
-app.listen(PORT, () => {
+server.listen(PORT, () => {
     console.log("listening on port " + PORT);
 });

@@ -10,7 +10,7 @@ function LogoutButton() {
   }
 
   return (
-    <div className='mt-auto cursor-pointer'>
+    <div className='mt-auto cursor-pointer pt-2'>
       {loading ? <span className="loading loading-spinner loading-md"></span> : <BiLogOut onClick={handleClick} className='text-white size-6' />}
     </div>
   )

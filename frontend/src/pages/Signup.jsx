@@ -80,7 +80,7 @@ const Signup = () => {
                     <GenderCheckBox onCheckboxChange={handleCheckBoxChange} selectedGender={inputs.gender} />
                     <Link to="/login" className="link link-warning">Already Have An Account?</Link>
                     <div className='mt-4'>
-                        <button className="btn btn-block btn-warning">Signup</button>
+                        <button className="btn btn-block btn-warning" disabled={loading} >{ loading ? <span className="loading loading-dots loading-md"></span> : "Sign up" }</button>
                     </div>
                 </form>
             </div>

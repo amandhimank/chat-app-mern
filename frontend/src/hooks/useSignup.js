@@ -41,12 +41,15 @@ function useSignup() {
         });
 
         const data = await res.json();
-        if(data.error) {
+        console.log(data);
+        
+        if(data.error ) {
             throw new Error(data.error);
         }
         
         localStorage.setItem("chat-user", JSON.stringify(data))
         setAuthUser(data);
+        toast.success("Signed In Successfully");
         
     } catch (error) {
         toast.error(error.message);

@@ -11,7 +11,7 @@ export const signup = async (req, res) => {
 
         const user = await User.findOne({ username });
         if(user) {
-            return res.status(400).json({ message: "User Already Exists!" });
+            return res.status(400).json({ error: "User Already Exists!", success: false });
         }
 
         const boyProfilePic = `https://avatar.iran.liara.run/public/boy?username=${username}`;

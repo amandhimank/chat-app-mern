@@ -16,10 +16,7 @@ const PORT = process.env.PORT || 3000;
 
 app.use(bodyParser.json());
 app.use(cookieParser());
-app.use(cors({
-    origin: "https://chat-app-mern-0fyl.onrender.com",
-    credentials: true
-}));
+
 
 import authRoutes from './routes/auth.routes.js'; 
 import messageRoutes from './routes/message.route.js';

@@ -14,7 +14,7 @@ const Login = () => {
     }
 
     return (
-        <div className='flex flex-col items-center justify-center min-w-96 mx-auto'>
+        <div className='flex flex-col items-center justify-center min-w-96 mx-auto md:p-0 p-8'>
             <div className='w-full bg-indigo-900 shadow-md p-6 rounded-md bg-clip-padding backdrop-filter backdrop-blur-3xl bg-opacity-10'>
                 <h1 className='text-3xl font-semibold text-center text-gray-200'>Login <span className='text-amber-400'>ChatHub</span></h1>
                 <form onSubmit={handleLogin}>
